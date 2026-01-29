@@ -1,0 +1,4 @@
+github.com/zzguang83325/eorm v1.0.2 h1:UbrCtd0/QdS1gY6tW/RT6k9/B1Wks/dk1nmQ6E/KzcI=
+github.com/zzguang83325/eorm v1.0.2/go.mod h1:dOZZQSHl2txajDoiX0KDIy7pHMezYK5QFUlnMPNKomQ=
+golang.org/x/text v0.14.0 h1:ScX5w1eTa3QqT8oi6+ziP7dTV1S2+ALU0bI+0zXKWiQ=
+golang.org/x/text v0.14.0/go.mod h1:18ZOQIKpY8NJVqYksKHtTdi31H5itFRjB5/qKTNYzSU=
