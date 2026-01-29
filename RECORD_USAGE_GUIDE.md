@@ -545,7 +545,8 @@ if profile, err := record.GetRecord("profile"); err == nil {
 }
 
 // 获取数组
-if tags, ok := record.Get("tags").([]interface{}); ok {
+tags, err := record.GetSlice("tags")
+if err == nil {
     for _, tag := range tags {
         fmt.Println("标签:", tag)
     }

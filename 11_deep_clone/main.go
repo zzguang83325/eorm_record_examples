@@ -153,15 +153,17 @@ func main() {
 	}`)
 
 	deepCopy6 := record6.DeepClone()
-	if hobbies, ok := deepCopy6.Get("hobbies").([]interface{}); ok {
+	hobbies, _ := deepCopy6.GetSlice("hobbies")
+	if len(hobbies) > 0 {
 		hobbies[0] = "编程"
-		hobbies = append(hobbies, "音乐")
-		deepCopy6.Set("hobbies", hobbies)
 	}
-	if scores, ok := deepCopy6.Get("scores").([]interface{}); ok {
+	hobbies = append(hobbies, "音乐")
+	deepCopy6.Set("hobbies", hobbies)
+	scores, _ := deepCopy6.GetSlice("scores")
+	if len(scores) > 0 {
 		scores[0] = 100
-		deepCopy6.Set("scores", scores)
 	}
+	deepCopy6.Set("scores", scores)
 
 	fmt.Printf("   原始记录: %s\n", record6.ToJson())
 	fmt.Printf("   深拷贝记录: %s\n", deepCopy6.ToJson())
